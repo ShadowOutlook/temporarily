@@ -11,3 +11,5 @@ https://wiki.archlinux.org/title/Alacritty
 https://wiki.archlinux.org/title/Picom
 https://wiki.archlinux.org/title/Rofi
 https://wiki.archlinux.org/title/Fish_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
+
+Помоги пожалуйста с полной детальной установкой arch linux со всеми необходимыми командами и загрузки оконного менеджера...  bspwm
