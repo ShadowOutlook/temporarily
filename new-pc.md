@@ -10,4 +10,4 @@
 
 материнская плата MSI PRO B650M-P 14 000 https://www.dns-shop.ru/product/2a63664ce255ed20/materinskaa-plata-msi-pro-b650m-p/
 
-блок питания DEEPCOOL PK650D [R-PK650D-FA0B-EU] 6 200 DEEPCOOL PK650D [R-PK650D-FA0B-EU]
+блок питания DEEPCOOL PK650D [R-PK650D-FA0B-EU] 6 200 https://www.dns-shop.ru/product/5e7bfbcba9b9ed20/blok-pitania-deepcool-pk650d-r-pk650d-fa0b-eu/
