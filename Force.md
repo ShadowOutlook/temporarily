@@ -43,7 +43,7 @@
 
 # День 1
 
-### Chest/Back [[Chest-Back]] 
+### Chest/Back [[Chest-Back]] [Chest-Back](https://github.com/ShadowOutlook/temporarily/blob/main/Chest-Back.md)
 ```bash
 3 x 8 - 12
 ```
