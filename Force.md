@@ -44,70 +44,147 @@
 # День 1
 
 ### Chest/Back [[Chest-Back]]
+```bash
+3 x 8 - 12
+```
 
 #### Chapter 1
 ```bash
-3 x 8 - 12
 **Push:**
-1. Chest flies / Разведение рук спереди 30 kg
-2. Dips / Отжимания на брусьях-тренажер для отжиманий
-3. Chest presses / Жим горизонтальный в тренажере на плечи 30 kg
 
+1. Chest flies 30 kg
+	Разведение рук спереди
+
+2. Dips
+	Отжимания на брусьях-тренажер для отжиманий
+
+3. Chest presses 30 kg
+	Жим горизонтальный в тренажере на плечи
+```
+
+```bash
 **Pull:**
-1. Barbell Bent Over Rows / Тяга штанги в наклоне 15 kg
-2. Wide Grip Cable Row / Горизонтальная тяга в блочном тренажере 30+ kg
-3. Lat pulldowns / Тяга верхнего блока 30+ kg
+
+1. Barbell Bent Over Rows 15 kg
+	Тяга штанги в наклоне
+
+2. Wide Grip Cable Row 30+ kg
+	Горизонтальная тяга в блочном тренажере
+
+3. Lat pulldowns 30+ kg
+	Тяга верхнего блока
 ```
 
 #### Chapter 2
 ```bash
-3 x 8 - 12
 **Push:**
-4. Incline DB bench / Жим гантелей на наклонной скамье 15 kg
-5. Push-ups with legs elevated and weights under the arms / Отжимания с поднятыми ногами и опорой под руками для максимальной амплитуды 2 x 12 - 15
-6. Low to High Cable Chest Fly / Подьем каната из нижней позиции блока вверх перед грудью 2 x 15+ kg
 
+4. Incline DB bench 15 kg
+	Жим гантелей на наклонной скамье
+
+5. Push-ups with legs elevated and weights under the arms 2 x 12 - 15
+	Отжимания с поднятыми ногами и опорой под руками для максимальной амплитуды
+
+6. Low to High Cable Chest Fly 2 x 15+ kg
+	Подьем каната из нижней позиции блока вверх перед грудью
+```
+
+```bash
 **Pull:**
-4. Upright rows / Тяга штанги стоя к подбородку 20 kg
-5. Pull-ups with weights / Подтягивания с отягощением или наоборот с облегчением на 19 kg
-6. Kettlebell Swing / Махи гирей на каждую руку 12 kg или если вместятся две руки в одну гирю 20 kg
+
+4. Upright rows 20 kg
+	Тяга штанги стоя к подбородку
+
+5. Pull-ups with weights 19 kg
+	Подтягивания с отягощением или наоборот с облегчением
+
+6. Kettlebell Swing 2 x 12 kg or 1 x 20 kg
+	Махи гирей на каждую руку или одна на двоих
 ```
 
 #### DLC 3D BACK
 ```bash
-3 x 8 - 12
 2 x 15 kg
 **Pull**
-1. Vertical thrust in a Humvee / Вертикальная тяга в Хаммере
-2. Horizontal thrust in Hummer / Горизонтальная тяга в Хаммере
+
+1. Vertical thrust in a Humvee
+	Вертикальная тяга в Хаммере
+
+2. Horizontal thrust in Hummer
+	Горизонтальная тяга в Хаммере
 ```
+
 ***
 
 # День 2
-### Shoulders
-
-#### Chapter 1
+### Shoulders [[Shoulders]]
 ```bash
 3 x 12
-1. Lateral raises / Махи гантели
-2. DB shrugs / Шраги с гантелями в наклоне
-3. Cable lateral raises / Боковые подъемы на тросе
-4. Seated DB overhead press / Жим гантелей над головой сидя или на тренажере
-5. Rear Delt Flies / Разведение задних дельт
 ```
 
+```bash
 
-##### + Shoulders
-- [ ] Шраги в наклоне 2x12-15
-- [ ] Жим гантелей сидя над головой 3x8-10
-- [ ] Разводка дельт сзади 3x10-12
-- [ ] Разводка дельт спереди 3x10-12
-- [ ] Отведение руки в кроссовере 3x10-12
-- [ ] Landmine Squat to Rotational Press
+Rear delt
+
+1. Rear Delt Flies 22+ kg
+	Разведение задних дельт
+
+2. Cable rear delt fly 9 kg
+	Разведение задних дельт на тросе
+
+Side delt 9 kg
+
+1. Lateral raises
+	Махи гантели
+
+2. Cable lateral raises
+	Отведение руки в кроссовере
+
+Front delt 9 kg
+
+1. Seated DB overhead press
+	Жим гантелей над головой сидя или на тренажере
+
+2. Cable front raises
+	Подъемы троса вперед
+```
 
 ***
 
-#### День 3
+# День 3
+### Legs [[Legs]]
+```bash
+3 10 - 12
+```
+
+```bash
+Big medium and small gluteus
+
+1. Sumo Squats
+	Приседания в стиле сумо
+
+2. Romanian Deadlift
+	Румынская тяга
+
+3. Crossover Leg Abduction
+	Отведение ног в кроссовере
+```
+
+```bash
+Front of thigh
+
+1. Front Squats
+	Фронтальные приседания
+
+2. Leg press lying on the machine
+	Жим ногами лежа на тренажере
+
+3. 
+```
+
+
+
+
 
 ##### + Legs
 - [ ] Тренажер для сгибания подколенных сухожилий 3x10-12
