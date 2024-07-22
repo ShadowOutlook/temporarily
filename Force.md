@@ -43,7 +43,7 @@
 
 # День 1
 
-### Chest/Back [[Chest-Back]]
+### Chest/Back [[Chest-Back]] 
 ```bash
 3 x 8 - 12
 ```
@@ -53,13 +53,13 @@
 **Push:**
 
 1. Chest flies 30 kg
-	Разведение рук спереди
+	Сведение рук спереди
 
 2. Dips
 	Отжимания на брусьях-тренажер для отжиманий
 
 3. Chest presses 30 kg
-	Жим горизонтальный в тренажере на плечи
+	Жим горизонтальный в тренажере Хаммера
 ```
 
 ```bash
@@ -179,21 +179,58 @@ Front of thigh
 2. Leg press lying on the machine
 	Жим ногами лежа на тренажере
 
-3. 
+3. Stepping onto the platform
+	Вышагивание на платформу
+
+4. Leg extension machine
+	Разгибание ног в тренажере
 ```
 
+```bash
+Medial thigh group: adductor muscles
 
+1. Plie squats
+	Приседания плие
 
+2. Leg adduction machine
+	Сведение ног в тренажере
 
+3. Crossover leg adduction
+	Приведение ноги в кроссовере
+```
 
-##### + Legs
-- [ ] Тренажер для сгибания подколенных сухожилий 3x10-12
-- [ ] Приседания со штангой 3x6-8
-- [ ] Румынская становая тяга с гантелями 3x10-12
-- [ ] Разгибания ног 3x15-20
-- [ ] Подъемы на носки с отягощением 3x8-12
-- [ ] Кувырок с выходом в «пистолет»
-- [ ] Прыжки на скакалке с попеременным выпрямлением одной ноги
+```bash
+Muscles of the thigh, posterior group
+
+1. Straight Leg Deadlift
+	Становая тяга на прямых ногах
+
+2. Wide Stance Barbell Squat
+	Приседание со штангой с широкой постановкой ног
+
+3. Leg curl machine
+	Сгибание ног в тренажере
+```
+
+```bash
+Calf muscles
+
+1. Calf raises on a special machine
+	Подъемы на носки в специальном тренажере
+
+2. Dumbbell Calf Raises
+	Подъем на носки с гантелями
+```
+
+```bash
+Premium exercise
+
+1. Roll into a pistol
+	Кувырок с выходом в «пистолет»
+
+2. Jumping rope with alternate straightening of one leg
+	Прыжки на скакалке с попеременным выпрямлением одной ноги
+```
 
 ***
 
