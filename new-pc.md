@@ -11,3 +11,7 @@
 материнская плата MSI PRO B650M-P 14 000 https://www.dns-shop.ru/product/2a63664ce255ed20/materinskaa-plata-msi-pro-b650m-p/
 
 блок питания DEEPCOOL PK650D [R-PK650D-FA0B-EU] 6 200 https://www.dns-shop.ru/product/5e7bfbcba9b9ed20/blok-pitania-deepcool-pk650d-r-pk650d-fa0b-eu/
+
+монитор ASUS VY249HF [VESA 100] 11 850 https://www.onlinetrade.ru/catalogue/monitory-c23/asus/monitor_asus_vy249hf_23.8_black_vy249hf-4264407.html?utm_source=ydirect&utm_medium=cpc&utm_term=4968432414&yclid=7516020691186221055#tabs_description
+
+кронштейн ONKRON G80 4 500 https://www.dns-shop.ru/product/07174547cffe2ff2/kreplenie-dla-monitorov-onkron-g80/
