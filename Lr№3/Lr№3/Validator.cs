@@ -11,7 +11,7 @@ namespace Lr_3
     {
         public string Line(string value) // Проверка на введение строки
         {
-            while (int.TryParse(value, out _) | string.IsNullOrEmpty(value) | value.Contains(" ") | !Regex.IsMatch(value, @"[а-яА-Я]"))
+            while (int.TryParse(value, out _) || string.IsNullOrEmpty(value) || value.Contains(" ") || !Regex.IsMatch(value, @"[а-яА-Я]"))
             {
                 Console.Write("Введите верное значение!: ");
 
@@ -23,11 +23,39 @@ namespace Lr_3
 
         public string Number(string value) // Проверка на введение числа
         {
-            while (!int.TryParse(value, out _) | string.IsNullOrEmpty(value) | value.Contains(" ") | !Regex.IsMatch(value, @"[0-9]"))
+            while (!int.TryParse(value, out _) || string.IsNullOrEmpty(value) || value.Contains(" ") || !Regex.IsMatch(value, @"[0-9]"))
             {
                 Console.Write("Введите верное значение!: ");
 
                 value = Console.ReadLine();
+            }
+
+            return value;
+        }
+
+        public string Variant(string value) // Проверка на ввод 0 или 1
+        {
+            value = Number(value);
+
+            while (Convert.ToInt32(value) < 0 || Convert.ToInt32(value) > 1 || value == "-0")
+            {
+                Console.Write("Введите верное значение!: ");
+
+                value = Number(Console.ReadLine());
+            }
+
+            return value;
+        }
+
+        public string Year(string value, string thisYear) // Проверка на ввод года рождения в определенном диапазоне
+        {
+            value = Number(value);
+
+            while (Convert.ToInt32(value) < 1945 || Convert.ToInt32(value) > Convert.ToInt32(thisYear))
+            {
+                Console.Write("Введите год рождения от 1945!, но не более значения текущего года: ");
+
+                value = Number(Console.ReadLine());
             }
 
             return value;

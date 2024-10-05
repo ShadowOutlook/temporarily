@@ -20,7 +20,7 @@ namespace Lr_3
 
         bool continueLoop = true;
 
-        string choise;
+        public string thisYear;
 
         static void Main(string[] args)
         {
@@ -29,163 +29,126 @@ namespace Lr_3
 
             while (program.continueLoop)
             {
-                Console.WriteLine("Желаете ли вы создать нового пользователя?");
-                Console.Write("Для ответа введите да или нет: ");
 
-                program.choise = validator.Line(Console.ReadLine());
+                bool create = GetUserConsent("Желаете ли вы создать нового пользователя?" +
+                                             "\nДля ответа введите да или нет: ");
 
-                if (program.choise.ToLower() == "да")
+
+                if (create)
                 {
-                    DateTime currentDate = DateTime.Now;
-
-                    string thisYear = Convert.ToString(currentDate.Year);
-
                     program.CreateNewPerson();
                 }
-                else if (program.choise.ToLower() == "нет")
+                else
                 {
-                    Console.WriteLine("\nЗавершение работы программы!");
+                    if (program.Persons.Count >= 1)
+                    {
+                        bool look = GetUserConsent("Хотите ли вы просмотреть список сохраненных пользователей?" +
+                                                   "\nОтветье 'да' или 'нет': ");
+
+                        if (look)
+                        {
+                            foreach (var kvp in program.Persons)
+                            {
+                                Human human = kvp.Value;
+
+                                Console.WriteLine(new string(Convert.ToChar("-"), 64) + 
+                                                  $"\nФамилия: {human.Surname}" +
+                                                  $"\nПол: {human.OneGender}" +
+                                                  $"\nГод рождения: {human.BirthYear}\n" +
+                                                  new string(Convert.ToChar("-"), 64));
+                            }
+                        }
+                    }
+
+                    Console.WriteLine("Завершение работы программы!" +
+                                      "\nПрограмма завершена. Нажмите любую клавишу, чтобы закрыть консоль.");
+                    Console.ReadKey();
 
                     program.continueLoop = false;
                 }
-
-                while (program.choise.ToLower() != "да" | program.choise.ToLower() != "нет")
-                {
-                    Console.Write("Введите верное значение!: ");
-
-                    program.choise = validator.Line(Console.ReadLine());
-                }
-            }
-            if (!program.continueLoop)
-            {
-                program.continueLoop = true;
-                program.choise = null;
             }
         }
 
-        public void CreateNewPerson()
+        public void Saving(Human human) // Метод сохранения пользователя в словаре
+        {
+            bool save = GetUserConsent("Хотите ли вы сохранить данного пользователя?: ");
+
+            if (save)
+            {
+                Persons.Add(index, human);
+
+                index++;
+            }
+        }
+
+        public void Correct(Human human) // Метод проверки введенных данных перед сохранением
+        {
+            bool correct = GetUserConsent("Введите 'да' если все правильно или 'нет' в противном случае:");
+            
+            if (correct)
+            {
+                Saving(human);
+            }
+            else
+            {
+                Console.WriteLine("В таком случае, введите все данные c самого начала:");
+
+                CreateNewPerson();
+            }
+        }
+
+        public void CreateNewPerson() // Метод создания нового пользователя
         {
             string surname;
             string gender;
             string birthYear;
-            
-            Console.Write("Введите свою фамилию: ");
 
-            surname = Console.ReadLine();
+            surname = validator.Line(GetInput(new string(Convert.ToChar("-"), 64) +
+                               "\nВведите свою фамилию: "));
 
-            Console.Write("Введите свой пол в виде числа: 1 - мужчина, 0 - женщина: ");
+            gender = validator.Variant(GetInput("Введите свой пол в виде числа: 1 - мужчина, 0 - женщина: "));
 
-            gender = Console.ReadLine();
-
-            Console.Write("Введите свой год рождения: ");
-
-            birthYear = Console.ReadLine();
+            birthYear = validator.Year(GetInput("Введите свой год рождения: "), Convert.ToString(DateTime.Now.Year));
 
             Human human = Human.Create(surname, gender, birthYear);
 
-            while(continueLoop)
+            Console.WriteLine(new string(Convert.ToChar("-"), 64) +
+                              $"\nУбедитесь в правильности введенных вами значений:" +
+                              $"\nФамилия: {human.Surname}" +
+                              $"\nПол: {human.OneGender}" +
+                              $"\nГод рождения: {human.BirthYear}\n" +
+                              new string(Convert.ToChar("-"), 64));
+            
+            Correct(human);
+
+            Console.WriteLine(new string(Convert.ToChar("-"), 64) + "\n");
+        }
+
+        public string GetInput(string prompt) // Метод задания вопроса и получения на него ответа при вводе данных
+        {
+            Console.Write(prompt);
+            return Console.ReadLine();
+        }
+
+        public static bool GetUserConsent(string prompt) // Метод проверки выбора пользователя на поступающий вопрос
+        {
+            while (true)
             {
-                Console.WriteLine($"Убедитесь в правильности введенных вами значений:\nФамилия: {human.Surname}\nПол: {human.OneGender}\nГод рождения: {human.BirthYear}");
-                Console.Write("Введите 'да' если все правильно или 'нет' в противном случае: ");
+                Console.Write(prompt);
+                string input = Console.ReadLine().Trim().ToLower(); ;
 
-                choise = validator.Line(Console.ReadLine());
-
-                if (choise.ToLower() == "да") // Правильный ввод => вопрос о сохранении
+                if (input == "да")
                 {
-                    choise = null;
-
-                    Console.Write("Хотите ли вы сохранить данного пользователя?: ");
-
-                    choise = validator.Line(Console.ReadLine());
-
-                    if (choise.ToLower() == "да") // Хотим сохранить => сохраняем в словаре и прекращаем цикл с вопросом о правильности введенных данных
-                    {
-                        choise = null;
-
-                        Persons.Add(index, human);
-
-                        index++;
-                    }
-
-                    while (choise.ToLower() != "да" | choise.ToLower() != "нет") // Пока пользователь не введет корректный ответ о вопросе сохранения
-                    {
-                        Console.Write("Введите верное значение!: ");
-
-                        choise = validator.Line(Console.ReadLine());
-
-                        if (choise.ToLower() == "да") // Хотим сохранить => сохраняем в словаре и прекращаем цикл с вопросом о правильности введенных данных
-                        {
-                            choise = null;
-
-                            Persons.Add(index, human);
-
-                            index++;
-                        }
-                    }
-
-                    continueLoop = false; // Прекращаем цикл с вопросом о правильности введенных данных
+                    return true;
                 }
-                else if (choise.ToLower() == "нет") // Если пользователь где-то допустил ошибку, то начинаем ввод данных с самого начала
+                else if (input == "нет")
                 {
-                    Console.WriteLine("В таком случае, введите все данные c самого начала:");
-
-                    continueLoop = false; // Прекращаем цикл с вопросом о правильности введенных данных
-                    choise = null;
+                    return false;
                 }
-
-                while (choise.ToLower() != "да" | choise.ToLower() != "нет") // // Пока пользователь не введет корректный ответ о вопросе корректности введенных данных
+                else
                 {
-                    Console.Write("Введите верное значение!: ");
-
-                    choise = validator.Line(Console.ReadLine());
-
-                    if (choise.ToLower() == "да") // Правильный ввод => вопрос о сохранении
-                    {
-                        choise = null;
-
-                        Console.Write("Хотите ли вы сохранить данного пользователя?: ");
-
-                        choise = validator.Line(Console.ReadLine());
-
-                        if (choise.ToLower() == "да") // Хотим сохранить => сохраняем в словаре и прекращаем цикл с вопросом о правильности введенных данных
-                        {
-                            choise = null;
-
-                            Persons.Add(index, human);
-
-                            index++;
-                        }
-
-                        while (choise.ToLower() != "да" | choise.ToLower() != "нет") // Пока пользователь не введет корректный ответ о вопросе сохранения
-                        {
-                            Console.Write("Введите верное значение!: ");
-
-                            choise = validator.Line(Console.ReadLine());
-
-                            if (choise.ToLower() == "да") // Хотим сохранить => сохраняем в словаре и прекращаем цикл с вопросом о правильности введенных данных
-                            {
-                                choise = null;
-
-                                Persons.Add(index, human);
-
-                                index++;
-                            }
-                        }
-
-                        continueLoop = false; // Прекращаем цикл с вопросом о правильности введенных данных
-                    }
-                    else if (choise.ToLower() == "нет") // Если пользователь где-то допустил ошибку, то начинаем ввод данных с самого начала
-                    {
-                        Console.WriteLine("В таком случае, введите все данные c самого начала:");
-
-                        continueLoop = false; // Прекращаем цикл с вопросом о правильности введенных данных
-                        choise = null;
-                    }
-
-                    choise = "да"; // Для выхода из цикла
+                    Console.WriteLine("Некорректный ввод. Пожалуйста, введите 'да' или 'нет'.\n");
                 }
-
-                continueLoop = false; // Для выхода из цикла
             }
         }
     }
