@@ -33,7 +33,7 @@ namespace Lr_3
 
         string actionList = "\n1 - Увеличить год рождения на 1" + "\n2 - Уменьшить год рождения на 1" +
                             "\n3 - Список всех фамилий" + "\n4 - Разница в годах рождения между пользователями" +
-                            "\n5 - Нахождение пользователей со схожей фамилией" + "\n6 - Количество пользователей старше и младше" +
+                            "\n5 - Нахождение пользователей со схожей фамилией" + "\n6 - Количество пользователей с отличным от вашего года рождения" +
                             "\n7 - Фамилии пользователей одного пола" + "\n8 - Возраст пользователя" +
                             "\n0 - Выйти";
 
@@ -204,31 +204,95 @@ namespace Lr_3
 
         static void DownBirthYear()
         {
-            
+            Program program = new Program();
+            Validator validator = new Validator();
+
+            int indexUser = validator.Variant(program.GetInput($"Выберите пользователя для которого вы хотите изменить возраст из {program.Persons.Count} количества: "), 0, program.Persons.Count);
+
+            program.Persons[indexUser]--;
         }
 
         static void SurnameList()
         {
+            Program program = new Program();
 
+            List<string> surnames = new List<string>();
+
+            foreach (var kvp in program.Persons)
+            {
+                Human human = kvp.Value;
+
+                surnames += human;
+            }
+
+            Console.WriteLine("Список всех фамилий пользователей:");
+
+            for (int i = 0; i < surnames.Count; i++)
+            {
+                Console.WriteLine(surnames[i]);
+            }
         }
 
         static void DifferenceInYears()
         {
+            Program program = new Program();
+            Validator validator = new Validator();
 
+            int indexUser1 = validator.Variant(program.GetInput($"Выберите пользователя 1 из {program.Persons.Count} количества: "), 0, program.Persons.Count);
+            int indexUser2 = validator.Variant(program.GetInput($"Выберите пользователя 2 из {program.Persons.Count} количества: "), 0, program.Persons.Count);
+
+            Human human1 = program.Persons[indexUser1];
+            Human human2 = program.Persons[indexUser2];
+
+            Console.WriteLine($"Разница в годах рождения между пользователями {human1.Surname} и {human2.Surname}: {Math.Abs(human1 - human2)}");
         }
 
         static void FindSimilarSurname()
         {
+            Program program = new Program();
+            Validator validator = new Validator();
 
+            string surname = validator.Line(program.GetInput("Введите фамилию пользователя, поиск по которой вы хотите произвести: "));
+
+            Human searchHuman = new Human(surname, 1, 2000);
+
+            foreach (var kvp in program.Persons)
+            {
+                if (kvp.Value == searchHuman)
+                {
+                    Console.WriteLine($"Совпадение найдено на индексе: {kvp.Key}");
+                }
+            }
         }
 
         static void FindCountOtherYear()
         {
+            Program program = new Program();
+            Validator validator = new Validator();
 
+            int count = 0;
+
+            int birthYear = validator.Year(program.GetInput("Введите год рождения, чтобы получить количество пользователей с отличным от введенного вами: "), Convert.ToString(DateTime.Now.Year));
+
+            foreach (var kvp in program.Persons)
+            {
+                if (birthYear != kvp.Value)
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine($"Пользователей с иным годом рождения: {count}");
         }
 
         static void ListOfSurnamesByGender()
         {
+            Program program = new Program();
+            Validator validator = new Validator();
+
+            Dictionary<int, string> malesSurnames = new Dictionary<int, string>();
+            Dictionary<int, string> femalesSurnames = new Dictionary<int, string>();
+
 
         }
 

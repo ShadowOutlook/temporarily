@@ -79,5 +79,57 @@ namespace Lr_3
             --h.BirthYear;
             return h;
         }
+
+        public static List<string> operator +(List<string> surnames, Human h)
+        {
+            surnames.Add(h.Surname);
+
+            return surnames;
+        }
+
+        public static int operator -(Human h1, Human h2)
+        {
+            return h1.BirthYear - h2.BirthYear;
+        }
+
+        public static bool operator ==(Human h1, Human h2)
+        {
+            if (ReferenceEquals(h1, null) || ReferenceEquals(h2, null))
+            {
+                return false;
+            }
+
+            return h1.Surname == h2.Surname;
+        }
+
+        public static bool operator !=(Human h1, Human h2)
+        {
+            return !(h1 == h2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || !(obj is Human))
+            {
+                return false;
+            }
+
+            return Surname == ((Human)obj).Surname;
+        }
+
+        public override int GetHashCode()
+        {
+            return Surname.GetHashCode();
+        }
+
+        public static bool operator !=(int birthYear, Human h2)
+        {
+            return birthYear == h2.BirthYear;
+        }
+
+        public static bool operator ==(int birthYear, Human h2)
+        {
+            return !(birthYear == h2.BirthYear);
+        }
     }
 }
