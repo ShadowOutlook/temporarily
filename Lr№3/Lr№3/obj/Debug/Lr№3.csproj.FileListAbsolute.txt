@@ -1,7 +1,0 @@
-C:\Users\sabir\source\repos\Lr№3\Lr№3\bin\Debug\Lr№3.exe.config
-C:\Users\sabir\source\repos\Lr№3\Lr№3\bin\Debug\Lr№3.exe
-C:\Users\sabir\source\repos\Lr№3\Lr№3\bin\Debug\Lr№3.pdb
-C:\Users\sabir\source\repos\Lr№3\Lr№3\obj\Debug\Lr№3.csproj.AssemblyReference.cache
-C:\Users\sabir\source\repos\Lr№3\Lr№3\obj\Debug\Lr№3.csproj.CoreCompileInputs.cache
-C:\Users\sabir\source\repos\Lr№3\Lr№3\obj\Debug\Lr№3.exe
-C:\Users\sabir\source\repos\Lr№3\Lr№3\obj\Debug\Lr№3.pdb
