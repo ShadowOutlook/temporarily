@@ -1,0 +1,1 @@
+INSERT INTO AwardStudent (AwardId, StudentId, DateOfDelivery, PlaceOfDelivery) VALUES (1, 3, GETDATE(), 'Университет');
