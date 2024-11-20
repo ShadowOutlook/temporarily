@@ -1,3 +1,0 @@
-ALTER TABLE Performance
-ADD
-	EventName VARCHAR(100) NOT NULL;

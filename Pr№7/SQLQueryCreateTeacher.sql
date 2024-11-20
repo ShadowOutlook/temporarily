@@ -1,1 +1,0 @@
-INSERT INTO Teacher (TeacherSurname, TeacherName, TeacherPatronymic) VALUES ('Волков', 'Максим', 'Генадъевич'), ('Волкова', 'Марина', 'Генадъевна');
