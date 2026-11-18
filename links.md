@@ -31,3 +31,6 @@ Verification of the authority of the companies listed on the websites: student-i
 
 Best wishes, Ulugbek Sabirov
 ```
+```bash
+Gridinsoft (Website Reputation Checker)
+```
