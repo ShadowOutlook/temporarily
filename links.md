@@ -7,3 +7,7 @@ https://www.avira.com/
 ```bash
 https://www.urlvoid.com/scan/shadow-outlook.shop/
 ```
+
+```bash
+https://support.regway.com/ticket.php?track=X49-DGV-9D4L&e=sabirovy53%40gmail.com&Refresh=30028
+```
